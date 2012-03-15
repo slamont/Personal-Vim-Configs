@@ -65,6 +65,20 @@ let NERDTreeIgnore+=['.*\.pyc$']
 "setup NERDtree mapping
 map <F2> :NERDTreeToggle<CR>
 
+noremap <F5> :set paste!<CR>
+
+nnoremap <C-j> :m+<CR>==
+nnoremap <C-k> :m-2<CR>==
+inoremap <C-j> <Esc>:m+<CR>==gi
+inoremap <C-k> <Esc>:m-2<CR>==gi
+vnoremap <C-j> :m'>+<CR>gv=gv
+vnoremap <C-k> :m-2<CR>gv=gv
+noremap <silent> <C-H> :tabp<CR>
+noremap <silent> <C-L> :tabn<CR>
+
+" Add ignorance of whitespace to diff
+set diffopt+=iwhite
+
 
 " this gives me convenient key mappings for window movement
 "nnoremap <C-h> <C-w>h
