@@ -13,7 +13,7 @@ set showmatch       "When a bracket is inserted, briefly jump to the matching on
 set sidescrolloff=20    "The minimal number of screen columns to keep to the left and to the right of the cursor if 'nowrap' is set
 set ignorecase smartcase       "Override the 'ignorecase' option if the search pattern contains upper case characters
 set statusline=%<%f\ %h%m%r%y%=%b\ 0x%B\ \%-14.(%l,%c%V%)\ %P   "Set a status line giving various information
-set statusline+=\ %{exists('g:loaded_fugitive')?fugitive#statusline():''}
+set statusline+=\ %{exists('g:loaded_fugitive')?fugitive#statusline():''} "If available, give Git location in Statusline
 "set cursorline      "Highlight the cursor line
 set laststatus=2    "Last window get a status line
 set wildmenu        "When 'wildmenu' is on, command-line completion operates in an enhanced mode
@@ -25,11 +25,16 @@ syn on              "Activate syntax highlighting
 set wmh=1           "The minimal height of a window when it's not the current window
 filetype plugin on  "Activate auto plugin activation based on filetype
 filetype indent on  "Activate auto indentation configuration associated with filetype
-set tags=/home/slamon/.vim/ctags.db "Where is the ctags Database
+set tags=/home/lams/ctags.db' "Where is the ctags Database
 let g:BASH_AuthorName   = 'Sylvain Lamontagne'
 let g:BASH_Email        = 'sylvain.lamontagne@gmail.com'
 let g:BASH_Company      = 'LamsSoft'
+
+"Options for MRU plugins
 let MRU_Max_Entries = 200
+let MRU_File = '/home/lams/vim_mru_files'
+let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'  " For Unix
+
 set incsearch       "Show searched pattern while matched
 set expandtab       "In insert mode use the proper number of space when pressing TAB
 set tabstop=4       "Tabs mean 4 space
@@ -56,6 +61,7 @@ autocmd VimEnter * NERDTree
 nmap <leader>d :bprevious<CR>:bdelete #<CR>
 
 nmap <F8> :TagbarToggle<CR>
+nmap <F3> :MRU<CR>
 
 "NERDTreeIgnore
 let NERDTreeIgnore=[]
