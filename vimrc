@@ -40,11 +40,6 @@ set expandtab       "In insert mode use the proper number of space when pressing
 set tabstop=4       "Tabs mean 4 space
 set shiftwidth=4    "Indent use 4 space
 autocmd FileType make setlocal noexpandtab
-" Press Space to turn off highlighting and clear any message already
-" displayed.
-noremap <silent> <Space> :silent noh<Bar>echo<CR>
-" Press F4 to toggle highlighting on/off.
-noremap <F4> :set hls!<CR>
 set wildignore=*.o,*.obj,*.bak,*.exe
 set number          "Display line number
 set numberwidth=3   "Line number size
@@ -57,21 +52,33 @@ set splitbelow
 set splitright 
 autocmd VimEnter * NERDTree
 
-"the sequence `\d` will delete the current buffer without killing the window
-nmap <leader>d :bprevious<CR>:bdelete #<CR>
-
-nmap <F8> :TagbarToggle<CR>
-nmap <F3> :MRU<CR>
-
 "NERDTreeIgnore
 let NERDTreeIgnore=[]
 let NERDTreeIgnore+=['.*\~$']
 let NERDTreeIgnore+=['.*\.pyc$']
-
 "setup NERDtree mapping
 map <F2> :NERDTreeToggle<CR>
 
+
+"Some Gundo Options that can be used
+"let g:gundo_width = 60          "Set the horizontal width of the Gundo graph (and preview)
+"let g:gundo_preview_height = 40 "Set the vertical height of the Gundo preview
+let g:gundo_right = 1           "Set this to 1 to make the Gundo graph (and preview) open on the right side instead of the left. 
+let g:gundo_preview_bottom = 1  "Force the preview window below current windows instead of below the graph. This gives the preview window more space to show the unified diff. 
+"let g:gundo_help = 1            "Set this to 0 to disable the help text in the Gundo graph window.
+"let g:gundo_disable = 0         "Set this to 1 to disable Gundo entirely.
+
+"the sequence `\d` will delete the current buffer without killing the window
+nmap <leader>d :bprevious<CR>:bdelete #<CR>
+" Press Space to turn off highlighting and clear any message already
+" displayed.
+noremap <silent> <Space> :silent noh<Bar>echo<CR>
+nmap <F3> :MRU<CR>
+" Press F4 to toggle highlighting on/off.
+noremap <F4> :set hls!<CR>
 noremap <F5> :set paste!<CR>
+nnoremap <F6> :GundoToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
 nnoremap <C-j> :m+<CR>==
 nnoremap <C-k> :m-2<CR>==

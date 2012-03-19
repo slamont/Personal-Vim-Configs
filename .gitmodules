@@ -10,3 +10,9 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule "/home/lams/.vim/bundle/gundo"]
+	path = /home/lams/.vim/bundle/gundo
+	url = http://github.com/sjl/gundo.vim.git
+[submodule "/home/lams/.vim/bundle/vcscommand"]
+	path = /home/lams/.vim/bundle/vcscommand
+	url = git://repo.or.cz/vcscommand
