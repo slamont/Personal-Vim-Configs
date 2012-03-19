@@ -92,7 +92,7 @@ noremap <silent> <C-L> :tabn<CR>
 " Add ignorance of whitespace to diff
 set diffopt+=iwhite
 
-
+let mapleader = ","
 " this gives me convenient key mappings for window movement
 "nnoremap <C-h> <C-w>h
 "nnoremap <C-j> <C-w>j
