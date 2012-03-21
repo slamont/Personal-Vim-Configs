@@ -99,6 +99,4 @@ let mapleader = ","
 "nnoremap <C-k> <C-w>k
 "nnoremap <C-l> <C-w>l
 
-"This allows you to hit Escape to unset the 'last search pattern' register 
-
 :runtime! ftplugin/man.vim
