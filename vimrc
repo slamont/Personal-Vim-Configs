@@ -92,6 +92,7 @@ noremap <silent> <C-L> :tabn<CR>
 " Add ignorance of whitespace to diff
 set diffopt+=iwhite
 
+set t_Co=256    " Tell Vim that we are mostly using a 256 compatible term palette
 let mapleader = ","
 " this gives me convenient key mappings for window movement
 "nnoremap <C-h> <C-w>h
@@ -100,7 +101,6 @@ let mapleader = ","
 "nnoremap <C-l> <C-w>l
 
 "" Special settings for solarized 
-"set t_Co=256
 "set background=dark
 "let g:solarized_termtrans=1
 "let g:solarized_termcolors=256
