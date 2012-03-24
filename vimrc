@@ -108,5 +108,8 @@ let mapleader = ","
 "let g:solarized_visibility="high"
 "colorscheme solarized
 
+"Configuration for Ack
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+nnoremap <leader>a :Ack
 
 :runtime! ftplugin/man.vim
