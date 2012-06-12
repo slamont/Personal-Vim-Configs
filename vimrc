@@ -71,6 +71,7 @@ noremap <F5> :set paste!<CR>
 " Add ignorance of whitespace to diff
 set diffopt+=iwhite
 set ttyfast         " for speed and better rendering
+noremap <F9> :w !sudo tee %<CR>
 
 "Buffer Options
 nnoremap <tab> :bn<cr>
