@@ -15,7 +15,7 @@
 	url = http://github.com/sjl/gundo.vim.git
 [submodule "bundle/vcscommand"]
 	path = bundle/vcscommand
-    url = git://github.com/vim-scripts/vcscommand.vim.git
+	url = git://github.com/vim-scripts/vcscommand.vim.git
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
