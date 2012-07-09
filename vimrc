@@ -86,7 +86,7 @@ nmap <F8> :TagbarToggle<CR>
 set tags=$HOME/ctags.db "Where is the ctags Database
 
 ""NERDTree Plugin's Setting
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 "NERDTreeIgnore
 let NERDTreeIgnore=[]
 let NERDTreeIgnore+=['.*\~$']
@@ -135,6 +135,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+au Syntax * RainbowParenthesesLoadChevrons
 
 " load the matchit plugin.
 runtime macros/matchit.vim
