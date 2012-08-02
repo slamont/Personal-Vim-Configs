@@ -12,6 +12,9 @@ syn on              "Activate syntax highlighting
 filetype plugin on  "Activate auto plugin activation based on filetype
 filetype indent on  "Activate auto indentation configuration associated with filetype
 
+set completeopt=longest,menuone
+set ofu=syntaxcomplete#Complete  "Activate Omni Completion
+
 "Indentation and Tabs config
 set ai              "Activate automatic indentation
 set smartindent     "Do smart autoindenting when starting a new line
@@ -94,11 +97,12 @@ let NERDTreeIgnore+=['.*\.pyc$']
 "setup NERDtree mapping
 map <F2> :NERDTreeToggle<CR>
 
+"Some Configuration for Omni-Completion with python
+"autocmd FileType python set omnifunc=pythoncomplete#Complete
+"This should show the PyDoc and auto close it when cursor move
+"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-"Options used with Bash-Support plugin
-let g:BASH_AuthorName   = 'Sylvain Lamontagne'
-let g:BASH_Email        = 'sylvain.lamontagne@gmail.com'
-let g:BASH_Company      = 'LamsSoft'
 
 "Options for MRU plugins
 nmap <F3> :MRU<CR>
@@ -135,9 +139,10 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-au Syntax * RainbowParenthesesLoadChevrons
+"Had to disable Chevrons since it conflicts with PHP Syntax
+"au Syntax * RainbowParenthesesLoadChevrons
 
 " load the matchit plugin.
 runtime macros/matchit.vim
 
-:runtime! ftplugin/man.vim
+runtime ftplugin/man.vim
