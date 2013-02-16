@@ -6,7 +6,7 @@
 # cd .vim
 # ./setup_vim.sh 
 
-git submodule update --init
+git submodule update --init --recursive
 
 cd ~
 ln -s -f .vim/vimrc .vimrc
