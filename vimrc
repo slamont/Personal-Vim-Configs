@@ -52,8 +52,6 @@ set autowrite       "Activate an automatic write of the file on some various com
 set ffs=unix,dos,mac    "Format to try for EOL
 "Special FileType .mod as PHP
 au BufRead,BufNewFile *.mod set filetype=PHP
-"Special FileType .pp (Puppet) as Ruby
-au BufRead,BufNewFile *.pp set filetype=ruby
 
 set showmatch       "When a bracket is inserted, briefly jump to the matching one
 set wildmenu        "When 'wildmenu' is on, command-line completion operates in an enhanced mode
@@ -143,6 +141,11 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 "Had to disable Chevrons since it conflicts with PHP Syntax
 "au Syntax * RainbowParenthesesLoadChevrons
+
+"Don't want the SyntaxChecker to run in active
+
+"Activate Syntax Error checking
+nmap <leader>s :SyntasticCheck<cr>
 
 " load the matchit plugin.
 runtime macros/matchit.vim
