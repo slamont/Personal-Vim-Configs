@@ -19,8 +19,8 @@ set ofu=syntaxcomplete#Complete  "Activate Omni Completion
 set ai              "Activate automatic indentation
 set smartindent     "Do smart autoindenting when starting a new line
 set expandtab       "In insert mode use the proper number of space when pressing TAB
-set tabstop=4       "Tabs mean 4 space
-set shiftwidth=4    "Indent use 4 space
+set tabstop=2       "Tabs mean 4 space
+set shiftwidth=2    "Indent use 4 space
 set bs=2            "Set indent,oel,start for backspace 
 
 autocmd FileType make setlocal noexpandtab
