@@ -12,7 +12,7 @@
 	url = git://github.com/tpope/vim-fugitive.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
-	url = http://github.com/sjl/gundo.vim.git
+	url = https://github.com/sjl/gundo.vim.git
 [submodule "bundle/vcscommand"]
 	path = bundle/vcscommand
 	url = http://repo.or.cz/w/vcscommand.git
