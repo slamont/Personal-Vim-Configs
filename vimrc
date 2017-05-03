@@ -110,6 +110,9 @@ let MRU_Max_Entries = 200
 let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'  " For Unix
 
 "Some Gundo Options that can be used
+if has('python3')
+  let g:gundo_prefer_python3 = 1          " anything else breaks on Ubuntu 16.04+
+endif
 nnoremap <F6> :GundoToggle<CR>
 "let g:gundo_width = 60          "Set the horizontal width of the Gundo graph (and preview)
 "let g:gundo_preview_height = 40 "Set the vertical height of the Gundo preview
