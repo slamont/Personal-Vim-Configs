@@ -1,5 +1,5 @@
 call pathogen#infect()
-call pathogen#runtime_append_all_bundles() 
+call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 set nocp            "Disable compatibility Vi mode
