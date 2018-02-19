@@ -149,6 +149,7 @@ au Syntax * RainbowParenthesesLoadBraces
 
 "Activate Syntax Error checking
 nmap <leader>s :SyntasticCheck<cr>
+let g:syntastic_sh_shellcheck_args="-x"
 
 " load the matchit plugin.
 runtime macros/matchit.vim
