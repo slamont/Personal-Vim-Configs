@@ -35,3 +35,6 @@
 [submodule "bundle/vim-indent-guides"]
 	path = bundle/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "bundle/ansible-vim"]
+	path = bundle/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim
