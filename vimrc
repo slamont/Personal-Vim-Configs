@@ -159,3 +159,6 @@ runtime ftplugin/man.vim
 " Show trailing whitepace and spaces before a tab:
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+" Load special ansible file type instead of yaml
+au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
